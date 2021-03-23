@@ -6,9 +6,9 @@
 		<!-- アドレスバー等のブラウザのUIを非表示 -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 		<!-- ホーム画面に表示されるアプリ名 -->
-		<meta name="apple-mobile-web-app-title" content="ハザッス!!リンク集!!">
+		<meta name="apple-mobile-web-app-title" content="ハザリン!!">
 		<!-- ホーム画面に表示されるアプリアイコン -->
 		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 		<link rel="icon" href="favicon.ico">
@@ -65,9 +65,29 @@
 			}
 			@media only screen and (max-device-width: 750px){
   				.pic{
- 		  			width:100%;
+ 		  			width: 100%;
   				}
  			}
+ 			.head-border {
+    			display: flex;
+    			align-items: center;
+			}
+
+			.head-border:before,
+			.head-border:after {
+    			content: "";
+   				height: 3px;
+    			flex-grow: 1;
+    			background-color: #00ffff;
+			}
+
+			.head-border:before {
+    			margin-right: 1rem;
+			}
+
+			.head-border:after {
+    			margin-left: 1rem;
+			}
 		</style>
 	</head>
 	<body>
@@ -94,7 +114,39 @@
 				<img src="https://cdn.peraichi.com/userData/5fa11801-9910-4047-b177-4b070a000013/img/603cc2a97d4f5/original.jpg" class="pic"/>
 			</p>
 		</div>
+			<br>
+		<div id="notification" style="margin-right:auto; margin-left:auto; width: 75%;">
+			<h1 class="head-border">お知らせ</h1>
+			<br>
+			現在お知らせはありません。
+			<br>
+		</div>
+		<div id="ch" style="margin-right:auto; margin-left:auto; width: 75%;">
+			<h1 class="head-border">チャンネル一覧</h1>
+			<br>
+			【準備中です】
+			<br>
+		</div>
+		<div id="sns" style="margin-right:auto; margin-left:auto; width: 75%;">
+			<h1 class="head-border">ブログ・SNS</h1>
+			<br>
+			【準備中です】
+			<br>
+		</div>
+		<div id="ochat" style="margin-right:auto; margin-left:auto; width: 75%;">
+			<h1 class="head-border">オープンチャット</h1>
+			<br>
+			【準備中です】
+			<br>
+			<br>
+			<br>
+		</div>
 	</body>
+		<div id="line">
+			<br>
+				<hr class="mpart">
+			<br>
+		</div>
 	<footer style="text-align:center">
 　		<div id="footer">
 　			このサイトについてのお問合せ:<a href="mailto:hz819lilan@gmail.com">hz819lilan@gmail.com</a>
