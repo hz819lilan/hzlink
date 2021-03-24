@@ -56,10 +56,12 @@
  		  			font-size: 8px;
   				}
  			}
+ 			
 			.mpart{
 				height: 1px;
 				background-color: black;
 			}
+			
 			.pic{
 				width: 75%;
 			}
@@ -68,11 +70,20 @@
  		  			width: 100%;
   				}
  			}
+ 			
  			.head-border {
+ 				margin-right:auto;
+ 				margin-left:auto;
+ 				width: 75%;
     			display: flex;
     			align-items: center;
 			}
-
+			@media only screen and (max-device-width: 750px){
+  				.head-border{
+ 		  			width: 100%;
+  				}
+ 			}
+ 			
 			.head-border:before,
 			.head-border:after {
     			content: "";
@@ -88,6 +99,17 @@
 			.head-border:after {
     			margin-left: 1rem;
 			}
+			
+			.text {
+				margin-right:auto;
+				margin-left:auto;
+				width: 75%;
+			}
+			@media only screen and (max-device-width: 750px){
+  				.text {
+ 		  			width: 100%;
+  				}
+ 			}
 		</style>
 	</head>
 	<body>
@@ -115,29 +137,29 @@
 			</p>
 		</div>
 			<br>
-		<div id="notification" style="margin-right:auto; margin-left:auto; width: 75%;">
+		<div id="notification">
 			<h1 class="head-border">お知らせ</h1>
-			<br>
+			<p class="text">
 			現在お知らせはありません。
-			<br>
+			</p>
 		</div>
-		<div id="ch" style="margin-right:auto; margin-left:auto; width: 75%;">
+		<div id="ch">
 			<h1 class="head-border">チャンネル一覧</h1>
-			<br>
+			<p class="text" style="text-align:center">
 			【準備中です】
-			<br>
+			</p>
 		</div>
-		<div id="sns" style="margin-right:auto; margin-left:auto; width: 75%;">
+		<div id="sns">
 			<h1 class="head-border">ブログ・SNS</h1>
-			<br>
+			<p class="text" style="text-align:center">
 			【準備中です】
-			<br>
+			</p>
 		</div>
-		<div id="ochat" style="margin-right:auto; margin-left:auto; width: 75%;">
+		<div id="ochat">
 			<h1 class="head-border">オープンチャット</h1>
-			<br>
+			<p class="text" style="text-align:center">
 			【準備中です】
-			<br>
+			</p>
 			<br>
 			<br>
 		</div>
