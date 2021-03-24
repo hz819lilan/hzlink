@@ -13,10 +13,10 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 		<link rel="icon" href="favicon.ico">
 		<title>【開発中βVer.】ハザッス!!リンク集!!移行予定ページ</title>
-		<link rel="manifest" href="docs/manifest.json">
+		<link rel="manifest" href="manifest.json">
 		<script>
 		if('serviceWorker' in navigator){
-			navigator.serviceWorker.register('docs/service-worker.js')
+			navigator.serviceWorker.register('service-worker.js')
 				.then(function(){
 					console.log("Service Worker is registered!!");
 			});
@@ -36,7 +36,7 @@
 			}
 			
 			#headline{
-				font-size: 48px
+				font-size: 48px;
 			}
 			@media only screen and (max-device-width: 750px){
   				#headline{
@@ -45,7 +45,7 @@
  			}
  			
 			#main{
-				font-size: 48px
+				font-size: 48px;
 			}
 			@media only screen and (max-device-width: 750px){
   				#main{
@@ -54,11 +54,21 @@
  			}
  			
 			#ps{
-				font-size: 24px
+				font-size: 24px;
 			}
 			@media only screen and (max-device-width: 750px){
   				#ps{
  		  			font-size: 12px;
+  				}
+ 			}
+ 			
+ 			#latestvideo {
+ 				font-size: 48px;
+ 				text-align: center;
+ 			}
+			@media only screen and (max-device-width: 750px){
+  				#latestvideo{
+ 		  			font-size: 30px;
   				}
  			}
  			
@@ -135,7 +145,7 @@
 	</head>
 	<body>
 		<div id="headline" style="text-align:center">
-			↓ハザッス!!リンク集!!はこちら↓
+			↓従来サイト(メイン運営中)↓
 		</div>
 		<div id="main" style="text-align:center">
 			<p>
@@ -145,8 +155,18 @@
 			</p>
 		</div>
 		<div id="ps">
-			<p>今後ペライチから自作サイトへ移行予定。</p>
+			<p>今後ペライチから<a href="https://hz819lilan.github.io/hzlink/" target="_blank" rel="noopener noreferrer">自作サイト</a>へ移行予定。</p>
 		</div>
+		<div id="line">
+			<br>
+				<hr class="mpart">
+			<br>
+		</div>
+		<p>
+			<div id="latestvideo">
+				<a href="latest video.html">最新の動画はこちら!!</a>
+			</div>
+		</p>
 		<div id="line">
 			<br>
 				<hr class="mpart">
