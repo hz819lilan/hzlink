@@ -4,8 +4,8 @@
   "description"       : "【開発中βVer.】ハザッス!!リンク集!!移行予定ページ",
   "start_url"         : "index.html",
   "display"           : "standalone",
-  "background_color"  : "#ff0000",
-  "theme_color"       : "#ff0000",
+  "background_color"  : "#fff",
+  "theme_color"       : "#fff",
   "icons": [{
       "src"           : "icon192.png",
       "sizes"         : "192x192",
