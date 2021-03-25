@@ -1,12 +1,12 @@
-//ƒLƒƒƒbƒVƒ…–¼
+//ã‚­ãƒ£ãƒƒã‚·ãƒ¥å
 var CACHE_NAME  = "Hzlink-PWA";
 
-//ƒLƒƒƒbƒVƒ…‚·‚éƒtƒ@ƒCƒ‹–¼
+//ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã™ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«å
 var urlsToCache = [
 	'/hz819lilan.github.io/hzlink/',	
 ];
 
-//ƒCƒ“ƒXƒg[ƒ‹ˆ—
+//ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ™‚å‡¦ç†
 self.addEventListener('install', function(event) {
     event.waitUntil(
         caches
@@ -17,7 +17,7 @@ self.addEventListener('install', function(event) {
     );
 });
 
-// ƒtƒFƒbƒ`‚ÌƒLƒƒƒbƒVƒ…ƒ[ƒhˆ—
+// ãƒ•ã‚§ãƒƒãƒæ™‚ã®ã‚­ãƒ£ãƒƒã‚·ãƒ¥ãƒ­ãƒ¼ãƒ‰å‡¦ç†
 self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches
