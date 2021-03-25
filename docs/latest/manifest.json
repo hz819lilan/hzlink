@@ -3,7 +3,7 @@
   "short_name"        : "ハザリン!!",
   "description"       : "【開発中βVer.】ハザッス!!リンク集!!移行予定ページ",
   "scope"			  : "/docs/"
-  "start_url"         : "latest.html",
+  "start_url"         : "index.html",
   "display"           : "standalone",
   "background_color"  : "#ff0000",
   "theme_color"       : "#ff0000",
