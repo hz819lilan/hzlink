@@ -1,12 +1,32 @@
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
+//キャッシュ名
+var CACHE_NAME  = "Hzlink-PWA";
+
+//キャッシュするファイル名
+var urlsToCache = [
+	'/hz819lilan.github.io/hzlink/',	
+];
+
+//インストール時処理
+self.addEventListener('install', function(event) {
+    event.waitUntil(
+        caches
+        .open(CACHE_NAME)
+        .then(function(cache){
+            return cache.addAll(urlsToCache);
+        })
+    );
 });
 
-self.addEventListener('activate', function(e) {
-  console.log('[ServiceWorker] Activate');
-});
-
-// サービスワーカー有効化に必須
+// フェッチ時のキャッシュロード処理
 self.addEventListener('fetch', function(event) {
-
+    event.respondWith(
+        caches
+            .match(event.request)
+            .then(function(response) {
+                if(response){
+                    return response;
+                }
+                return fetch(event.request);
+            })
+    );
 });

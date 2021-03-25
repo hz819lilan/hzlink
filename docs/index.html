@@ -13,17 +13,19 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 		<link rel="icon" href="favicon.ico">
 		<title>【開発中βVer.】ハザッス!!リンク集!!移行予定ページ</title>
-		<!--
+
 		<link rel="manifest" href="manifest.json" crossorigin="/use-credentials">
+
 		<script>
-		if('serviceWorker' in navigator){
-			navigator.serviceWorker.register('/service-worker.js')
-				.then(function(){
-					console.log("Service Worker is registered!!");
-			});
-		}
+		if ('serviceWorker' in navigator) {
+    	navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+        	console.log('ServiceWorker registration successful with scope: ', registration.scope);
+		}).catch(function(err) {
+        	console.log('ServiceWorker registration failed: ', err);
+    	});
+    	}
 		</script>
-		-->
+
 		<style>
 			body{
 				font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
@@ -37,15 +39,6 @@
   				}
 			}
 			
-			#headline{
-				font-size: 48px;
-			}
-			@media only screen and (max-device-width: 750px){
-  				#headline{
- 		  			font-size: 20px;
-  				}
- 			}
- 			
 			#main{
 				font-size: 48px;
 			}
@@ -146,13 +139,10 @@
 		</style>
 	</head>
 	<body>
-		<div id="headline" style="text-align:center">
-			↓従来サイト(メイン運営中)↓
-		</div>
 		<div id="main" style="text-align:center">
 			<p>
 				<a href="https://peraichi.com/landing_pages/view/hzlink" target="_blank" rel="noopener noreferrer">
-					ハザッス!!リンク集!!
+					従来サイト(3/31閉鎖)
 				</a>
 			</p>
 		</div>
