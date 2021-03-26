@@ -3,7 +3,14 @@ var CACHE_NAME  = "Hzlink-PWA";
 
 //キャッシュするファイル名
 var urlsToCache = [
-	'/hz819lilan.github.io/hzlink/',	
+	'apple-touch-icon.png',	
+	'favicon.ico',
+	'icon192.png',
+	'icon256.png',
+	'index.html',
+	'jquery-3.6.0.min.js',
+	'manifest.json',
+	'service-worker.js',
 ];
 
 //インストール時処理
