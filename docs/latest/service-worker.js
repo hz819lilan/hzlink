@@ -11,6 +11,12 @@ var urlsToCache = [
 	'jquery-3.6.0.min.js',
 	'manifest.json',
 	'service-worker.js',
+	'game.php',
+	'hazass.php',
+	'libero.php',
+	'liberop.php',
+	'occult.php',
+	'one.php',
 ];
 
 //インストール時処理

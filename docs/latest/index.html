@@ -127,25 +127,21 @@
 		<h2 class="title">リベロの部室<br>【ハイキュー!!ファンチャンネル】</h2>
 		<div id="libero"></div>
 		<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'libero.php');
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			if(xhr.readyState === 4 && xhr.status === 200) {
-				var json = JSON.parse(xhr.responseText);
-				var html = "";
-				var thumbnail = "";
-				var videoid = "";
-				var title = "";
-				for(var i in json.items){
-					thumbnail = json.items[i].snippet.thumbnails.high ? json.items[i].snippet.thumbnails.high.url : json.items[i].snippet.thumbnails.default.url;
-					videoid = json.items[i].snippet.resourceId.videoId;
-					title = json.items[i].snippet.title;
-					html += '<a href="https://www.youtube.com/watch?v='+videoid+'"><img src="'+thumbnail+'"><br>'+title+'<br>';
-				}
-				document.getElementById('libero').innerHTML = html;
-			}
-		}
+		$.ajax({
+		  type: 'GET',
+		  url: 'libero.php',
+		  datatype: 'json',
+		  success: function(json){
+		    num = json.items.length;
+		    for(var i = 0; i < num ; i++){
+ 		       var ID = json.items[i].id.videoId;
+		        $("#libero").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+		    }
+		  },
+ 		 error: function(){
+ 		   alert('error');
+		  }
+		});	
 		</script>
 		<br>
 		<br>
@@ -154,25 +150,21 @@
 		<h2 class="title">ハザッス!!遊厨部!!</h2>
 		<div id="hazass"></div>
 		<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'hazass.php');
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			if(xhr.readyState === 4 && xhr.status === 200) {
-				var json = JSON.parse(xhr.responseText);
-				var html = "";
-				var thumbnail = "";
-				var videoid = "";
-				var title = "";
-				for(var i in json.items){
-					thumbnail = json.items[i].snippet.thumbnails.high ? json.items[i].snippet.thumbnails.high.url : json.items[i].snippet.thumbnails.default.url;
-					videoid = json.items[i].snippet.resourceId.videoId;
-					title = json.items[i].snippet.title;
-					html += '<a href="https://www.youtube.com/watch?v='+videoid+'"><img src="'+thumbnail+'"><br>'+title+'<br>';
-				}
-				document.getElementById('hazass').innerHTML = html;
-			}
-		}
+		$.ajax({
+		  type: 'GET',
+		  url: 'hazass.php',
+		  datatype: 'json',
+		  success: function(json){
+		    num = json.items.length;
+		    for(var i = 0; i < num ; i++){
+ 		       var ID = json.items[i].id.videoId;
+		        $("#hazass").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+		    }
+		  },
+ 		 error: function(){
+ 		   alert('error');
+		  }
+		});	
 		</script>
 		<br>
 		<br>
@@ -181,25 +173,21 @@
 		<h2 class="title">リベロのオカルト研究会!!</h2>
 		<div id="occult"></div>
 		<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'occult.php');
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			if(xhr.readyState === 4 && xhr.status === 200) {
-				var json = JSON.parse(xhr.responseText);
-				var html = "";
-				var thumbnail = "";
-				var videoid = "";
-				var title = "";
-				for(var i in json.items){
-					thumbnail = json.items[i].snippet.thumbnails.high ? json.items[i].snippet.thumbnails.high.url : json.items[i].snippet.thumbnails.default.url;
-					videoid = json.items[i].snippet.resourceId.videoId;
-					title = json.items[i].snippet.title;
-					html += '<a href="https://www.youtube.com/watch?v='+videoid+'"><img src="'+thumbnail+'"><br>'+title+'<br>';
-				}
-				document.getElementById('occult').innerHTML = html;
-			}
-		}
+		$.ajax({
+		  type: 'GET',
+		  url: 'occult.php',
+		  datatype: 'json',
+		  success: function(json){
+		    num = json.items.length;
+		    for(var i = 0; i < num ; i++){
+ 		       var ID = json.items[i].id.videoId;
+		        $("#occult").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+		    }
+		  },
+ 		 error: function(){
+ 		   alert('error');
+		  }
+		});	
 		</script>
 		<br>
 		<br>
@@ -208,25 +196,21 @@
 		<h2 class="title">リベロP</h2>
 		<div id="liberop"></div>
 		<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'liberop.php');
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			if(xhr.readyState === 4 && xhr.status === 200) {
-				var json = JSON.parse(xhr.responseText);
-				var html = "";
-				var thumbnail = "";
-				var videoid = "";
-				var title = "";
-				for(var i in json.items){
-					thumbnail = json.items[i].snippet.thumbnails.high ? json.items[i].snippet.thumbnails.high.url : json.items[i].snippet.thumbnails.default.url;
-					videoid = json.items[i].snippet.resourceId.videoId;
-					title = json.items[i].snippet.title;
-					html += '<a href="https://www.youtube.com/watch?v='+videoid+'"><img src="'+thumbnail+'"><br>'+title+'<br>';
-				}
-				document.getElementById('liberop').innerHTML = html;
-			}
-		}
+		$.ajax({
+		  type: 'GET',
+		  url: 'liberop.php',
+		  datatype: 'json',
+		  success: function(json){
+		    num = json.items.length;
+		    for(var i = 0; i < num ; i++){
+ 		       var ID = json.items[i].id.videoId;
+		        $("#liberop").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+		    }
+		  },
+ 		 error: function(){
+ 		   alert('error');
+		  }
+		});	
 		</script>
 		<br>
 		<br>
@@ -235,25 +219,21 @@
 		<h2 class="title">ハザッス!!ゲーム愛好会!!</h2>
 		<div id="game"></div>
 		<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'game.php');
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			if(xhr.readyState === 4 && xhr.status === 200) {
-				var json = JSON.parse(xhr.responseText);
-				var html = "";
-				var thumbnail = "";
-				var videoid = "";
-				var title = "";
-				for(var i in json.items){
-					thumbnail = json.items[i].snippet.thumbnails.high ? json.items[i].snippet.thumbnails.high.url : json.items[i].snippet.thumbnails.default.url;
-					videoid = json.items[i].snippet.resourceId.videoId;
-					title = json.items[i].snippet.title;
-					html += '<a href="https://www.youtube.com/watch?v='+videoid+'"><img src="'+thumbnail+'"><br>'+title+'<br>';
-				}
-				document.getElementById('game').innerHTML = html;
-			}
-		}
+		$.ajax({
+		  type: 'GET',
+		  url: 'game.php',
+		  datatype: 'json',
+		  success: function(json){
+		    num = json.items.length;
+		    for(var i = 0; i < num ; i++){
+ 		       var ID = json.items[i].id.videoId;
+		        $("#game").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+		    }
+		  },
+ 		 error: function(){
+ 		   alert('error');
+		  }
+		});	
 		</script>
 		<br>
 		<br>
@@ -262,25 +242,21 @@
 		<h2 class="title">ハザッス!!ワンピース修業寺!!</h2>
 		<div id="one"></div>
 		<script>
-		var xhr = new XMLHttpRequest();
-		xhr.open('GET', 'one.php');
-		xhr.send();
-		xhr.onreadystatechange = function() {
-			if(xhr.readyState === 4 && xhr.status === 200) {
-				var json = JSON.parse(xhr.responseText);
-				var html = "";
-				var thumbnail = "";
-				var videoid = "";
-				var title = "";
-				for(var i in json.items){
-					thumbnail = json.items[i].snippet.thumbnails.high ? json.items[i].snippet.thumbnails.high.url : json.items[i].snippet.thumbnails.default.url;
-					videoid = json.items[i].snippet.resourceId.videoId;
-					title = json.items[i].snippet.title;
-					html += '<a href="https://www.youtube.com/watch?v='+videoid+'"><img src="'+thumbnail+'"><br>'+title+'<br>';
-				}
-				document.getElementById('one').innerHTML = html;
-			}
-		}
+		$.ajax({
+		  type: 'GET',
+		  url: 'one.php',
+		  datatype: 'json',
+		  success: function(json){
+		    num = json.items.length;
+		    for(var i = 0; i < num ; i++){
+ 		       var ID = json.items[i].id.videoId;
+		        $("#one").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+		    }
+		  },
+ 		 error: function(){
+ 		   alert('error');
+		  }
+		});	
 		</script>
 		<br>
 		<br>
