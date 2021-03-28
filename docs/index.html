@@ -113,9 +113,10 @@
 			}
 			
 			.text {
-				margin-right:auto;
-				margin-left:auto;
+				margin-right: auto;
+				margin-left: auto;
 				width: 75%;
+				text-align: center;
 			}
 			@media only screen and (max-device-width: 750px){
   				.text {
@@ -123,8 +124,60 @@
   				}
  			}
  			
+ 			.Twitter {
+ 				margin: 20px;
+ 				float: left;
+ 				width: 40%;
+ 				text-align: right;
+ 			}
+			@media only screen and (max-device-width: 750px){
+  				.Twitter{
+  					margin: 10px;
+  					float: left;
+ 		  			width: 40%;
+ 		  			text-align: right;
+  				}
+ 			}
+ 			
+ 			.Instagram {
+ 				margin: 20px;
+ 				float: right;
+ 				width: 40%;
+ 				text-align: left;
+ 			}
+			@media only screen and (max-device-width: 750px){
+  				.Instagram{
+  					margin: 10px;
+  					float: right;
+ 		  			width: 40%;
+ 		  			text-align: left;
+  				}
+ 			}
+ 			
+ 			.btn {
+ 				content: "";
+ 				display: block;
+ 				clear: both;
+ 				margin-bottom: 20px;
+				margin-right: auto;
+				margin-left: auto;
+				width: 75%;
+			  	border-radius: 20px;
+			  	background-color: #00ffff;
+			  	padding: 10px;
+			  	text-decoration: none;
+			  	color: #000;
+			  	text-align: center;
+			  	font-size: 24px;
+			}
+			@media only screen and (max-device-width: 750px){
+  				.btn {
+ 		  			font-size: 18px
+  				}
+ 			}
+ 			
  			footer {
- 				 text-align:center;
+ 				 text-align: center;
  			}
 			@media only screen and (max-device-width: 750px){
   				footer {
@@ -171,25 +224,44 @@
 			<br>
 		<div id="notification">
 			<h1 class="head-border">お知らせ</h1>
-			<p class="text">
+			<p class="text" style="text-align:left">
 			現在お知らせはありません。
 			</p>
 		</div>
 		<div id="ch">
 			<h1 class="head-border">チャンネル一覧</h1>
-			<p class="text" style="text-align:center">
+			<p class="text">
 			【準備中です】
 			</p>
 		</div>
 		<div id="sns">
-			<h1 class="head-border">ブログ・SNS</h1>
-			<p class="text" style="text-align:center">
-			【準備中です】
+			<h1 class="head-border">SNS・ブログ</h1>
+			<p class="text">
+				<div class="Twitter">
+					<a href="https://twitter.com/D_338633?s=20" target="_blank" rel="noopener noreferrer">
+						<img src="Twitter.png" width="80" height="80"/>
+					</a>
+				</div>
+				<div class="Instagram">
+					<a href="https://www.instagram.com/d_338633/" target="_blank" rel="noopener noreferrer">
+						<img src="Instagram.png" width="80" height="80"/>
+					</a>
+				</div>
+				<div class="btn">
+					<a href="https://liberop33.wpcomstaging.com/blog/" target="_blank" rel="noopener noreferrer">
+						ハザッス!!遊厨部!!活動記録
+					</a>
+				</div>
+				<div class="btn">
+					<a href="https://vt.tiktok.com/ZS4AaWcA/" target="_blank" rel="noopener noreferrer">
+						ハザッス!!宣伝部!!(TikTok)
+					</a>
+				</div>
 			</p>
 		</div>
 		<div id="ochat">
 			<h1 class="head-border">オープンチャット</h1>
-			<p class="text" style="text-align:center">
+			<p class="text">
 			【準備中です】
 			</p>
 			<br>
