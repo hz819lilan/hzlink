@@ -21,6 +21,11 @@
     	}
 		</script>
 		
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
+		
 		<style>
 			body{
 				font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
@@ -66,6 +71,9 @@
 				border-width: 0;
 				height: 2px;
 				background-color: black;
+ 				content: "";
+ 				display: block;
+ 				clear: both;
 			}
 			@media (prefers-color-scheme: dark) {
   				.mpart {
@@ -124,44 +132,28 @@
   				}
  			}
  			
- 			.Twitter {
- 				margin: 20px;
- 				float: left;
- 				width: 40%;
- 				text-align: right;
+ 			.snsicon {
+ 				margin-top: 20px;
+ 				margin-bottom: 20px;
+				margin-right: 40px;
+				margin-left: 40px;
+				display: inline-block;
+				text-align: center;
+				font-size: 24px;
  			}
 			@media only screen and (max-device-width: 750px){
-  				.Twitter{
-  					margin: 10px;
-  					float: left;
- 		  			width: 40%;
- 		  			text-align: right;
-  				}
- 			}
- 			
- 			.Instagram {
- 				margin: 20px;
- 				float: right;
- 				width: 40%;
- 				text-align: left;
- 			}
-			@media only screen and (max-device-width: 750px){
-  				.Instagram{
-  					margin: 10px;
-  					float: right;
- 		  			width: 40%;
- 		  			text-align: left;
+  				.snsicon {
+  				margin: 10px;
+				display: inline-block;
+				text-align: center;
   				}
  			}
  			
  			.btn {
- 				content: "";
- 				display: block;
- 				clear: both;
+ 				margin-top: 20px;
  				margin-bottom: 20px;
 				margin-right: auto;
 				margin-left: auto;
-				width: 75%;
 			  	border-radius: 20px;
 			  	background-color: #00ffff;
 			  	padding: 10px;
@@ -218,7 +210,9 @@
 		</div>
 		<div id="timetable" style="text-align:center">
 			<p>
-				<img src="https://cdn.peraichi.com/userData/5fa11801-9910-4047-b177-4b070a000013/img/603cc2a97d4f5/original.jpg" class="pic"/>
+				<a href="https://cdn.peraichi.com/userData/5fa11801-9910-4047-b177-4b070a000013/img/603cc2a97d4f5/original.jpg" data-lightbox="group">
+				<img src="https://cdn.peraichi.com/userData/5fa11801-9910-4047-b177-4b070a000013/img/603cc2a97d4f5/original.jpg" width="300" class="pic"/>
+				</a>
 			</p>
 		</div>
 			<br>
@@ -236,13 +230,13 @@
 		</div>
 		<div id="sns">
 			<h1 class="head-border">SNS・ブログ</h1>
-			<p class="text">
-				<div class="Twitter">
+			<div class="text">
+				<div class="snsicon">
 					<a href="https://twitter.com/D_338633?s=20" target="_blank" rel="noopener noreferrer">
 						<img src="Twitter.png" width="80" height="80"/>
 					</a>
 				</div>
-				<div class="Instagram">
+				<div class="snsicon">
 					<a href="https://www.instagram.com/d_338633/" target="_blank" rel="noopener noreferrer">
 						<img src="Instagram.png" width="80" height="80"/>
 					</a>
@@ -257,21 +251,33 @@
 						ハザッス!!宣伝部!!(TikTok)
 					</a>
 				</div>
-			</p>
+			</div>
 		</div>
 		<div id="ochat">
 			<h1 class="head-border">オープンチャット</h1>
-			<p class="text">
-			【準備中です】
-			</p>
-			<br>
+			<div class="text">
+				<div class="snsicon">
+					<a href="https://line.me/ti/g2/6Y3EDPYY4LiQ8mL-I43RDA" target="_blank" rel="noopener noreferrer">
+						<img src="LINE.png" width="80" height="80"/>
+					</a>
+					<br>
+					ハザッス!!の<br>駄弁り場
+				</div>
+				<div class="snsicon">
+					<a href="https://line.me/ti/g2/lj4TMwG3Y--4ICFkulJ4fw" target="_blank" rel="noopener noreferrer">
+						<img src="LINE.png" width="80" height="80"/>
+					</a>
+					<br>
+					ハザッス!!の<br>研究室
+				</div>
+			</div>
 		</div>
 		<div id="line">
 			<hr class="mpart">
 		</div>
 		<footer>
-　			このサイトについてのお問合せ:<a href="mailto:hz819lilan@gmail.com">hz819lilan@gmail.com</a>
-　			<br>
+			このサイトについてのお問合せ:<a href="mailto:hz819lilan@gmail.com">hz819lilan@gmail.com</a>
+			<br>
 			Copyright &copy; 2020 <a href="https://twitter.com/lilan2020" target="_blank" rel="noopener noreferrer">lilan2020</a> All Rights Reserved.
 		</footer>
 	</body>
