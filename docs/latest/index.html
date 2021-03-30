@@ -128,7 +128,7 @@
 		  type: 'GET',
 		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCk_zdfZ4J7c0wysDk-AlTgA&maxResults=1&order=date&type=video&key=AIzaSyCJeInUFJE2SbieV2M5Gp3r5uPdukbsN88',
 		  datatype: 'json'
-		  })
+		})
 		  .then(
 		  	function (json) {
 		    	num = json.items.length;
@@ -152,7 +152,7 @@
 		  type: 'GET',
 		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCOGneaNRwv9_5guAM0DmhOg&maxResults=1&order=date&type=video&key=AIzaSyAZ8R5fet4HrBOGmgt3ZrPhBt7_0XhzrC8',
 		  datatype: 'json'
-		  })
+		})
 		  .then(
 		  	function (json) {
 			    num = json.items.length;
@@ -200,7 +200,7 @@
 		  type: 'GET',
 		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCWYnMh8xY811DH8cb71fbUg&maxResults=1&order=date&type=video&key=AIzaSyAiL270ByHJ6nxnVP0i_PFAmsp-Wq_HqHk',
 		  datatype: 'json'
-		  })
+		})
 		  .then(
 		  	function (json) {
 		    	num = json.items.length;
@@ -208,7 +208,7 @@
 		       	var ID = json.items[i].id.videoId;
 		        	$("#liberop").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
 		    }, 
-		 	function () {
+		 	function (json) {
 				alert('【エラー】リベロPの最新動画取得に問題が発生しました。');
 		  	}
 		);
@@ -224,7 +224,7 @@
 		  type: 'GET',
 		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC0tX7rAh_xvj06hOxxUk76A&maxResults=1&order=date&type=video&key=AIzaSyAAlSS94o8VrfxXyx5bUdqkvQy1VTyi9v0',
 		  datatype: 'json'
-		  })
+		})
 		  .then(
 		  	function (json) {
 		    	num = json.items.length;
@@ -248,7 +248,7 @@
 		  type: 'GET',
 		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCac1PTUKHCy9rpTaDQxvQKw&maxResults=1&order=date&type=video&key=AIzaSyD2Ks4fRFB8ugjzSb33RkkahCG4iB6CG5M',
 		  datatype: 'json'
-		  })
+		})
 		  .then(
 		  	function (json) {
 		    	num = json.items.length;
