@@ -249,17 +249,19 @@
 		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCac1PTUKHCy9rpTaDQxvQKw&maxResults=1&order=date&type=video&key=AIzaSyD2Ks4fRFB8ugjzSb33RkkahCG4iB6CG5M',
 		  datatype: 'json'
 		  })
-		  .then(
+		  .done(
 		  	function(json) {
 		    	num = json.items.length;
 		    	for(var i = 0; i < num ; i++){
 		       	var ID = json.items[i].id.videoId;
 		        	$("#one").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		  	},
+		  	}
+		  )
+		  .fail(
 		 	function() {
 				alert('【エラー】ハザッス!!ワンピース修行寺!!の最新動画取得に問題が発生しました。');
 		  	}
-		);
+		  )
 		</script>
 		<br>
 		<br>
