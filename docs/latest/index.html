@@ -128,18 +128,14 @@
 		  type: 'GET',
 		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCk_zdfZ4J7c0wysDk-AlTgA&maxResults=1&order=date&type=video&key=AIzaSyCJeInUFJE2SbieV2M5Gp3r5uPdukbsN88',
 		  datatype: 'json'
-		})
-		  .then(
-		  	function (json) {
+		}).done(function (json) {
 		    	num = json.items.length;
 		    	for(var i = 0; i < num ; i++){
 		       	var ID = json.items[i].id.videoId;
 		        	$("#libero").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		    };
-		 	function () {
+		}).fail(function () {
 				alert('【エラー】リベロの部室の最新動画取得に問題が発生しました。');
-		  	};
-		);
+		});
 		</script>
 		<br>
 		<br>
