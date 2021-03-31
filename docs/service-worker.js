@@ -10,6 +10,15 @@ var urlsToCache = [
 	'index.html',
 	'manifest.json',
 	'service-worker.js',
+	'Instagram.png',
+	'LINE.png',
+	'Twitter.png',
+	'game.png',
+	'hazass.png',
+	'libero.png',
+	'liberop.png',
+	'occult.png',
+	'one.png',
 ];
 
 //インストール時処理

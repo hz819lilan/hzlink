@@ -1,7 +1,7 @@
 {
-  "name"              : "【開発中βVer.】ハザッス!!リンク集!!移行予定ページ",
-  "short_name"        : "ハザリン!!β",
-  "description"       : "【開発中βVer.】ハザッス!!リンク集!!移行予定ページ",
+  "name"              : "タイトル未定!!",
+  "short_name"        : "タイトル未定!!",
+  "description"       : "ハザッス!!のやつ",
   "start_url"         : "index.html",
   "display"           : "standalone",
   "background_color"  : "#fff",
