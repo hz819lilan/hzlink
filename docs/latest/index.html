@@ -52,24 +52,75 @@
   				}
 			}
 			
-			#title {
-				font-size: 36px;
-				text-align: center;
+			#tpart {
+ 				margin-top: 20px;
+ 				margin-bottom: 20px;
+ 				margin-left: auto;
+ 				margin-right: auto;
+				width: 75%;
+				border-top: 8px dotted #00ffff;
+				border-bottom: 8px dotted #00ffff;
 			}
-			@media only screen and (max-device-width: 750px) {
-  				#title {
-    				font-size: 14px;
+			@media only screen and (max-device-width: 750px){
+  				#tpart{
+ 		  			width: 100%;
   				}
+ 			}
+			
+			.ptitle {
+ 				margin-top: 20px;
+ 				margin-bottom: 20px;
+ 				margin-left: auto;
+ 				margin-right: auto;
+				text-align: center;
+				font-size: 60px;
+			}
+			@media only screen and (max-device-width: 750px){
+  				.ptitle{
+ 		  			font-size: 48px;
+  				}
+ 			}
+ 			
+			.text {
+				margin-right: auto;
+				margin-left: auto;
+				width: 75%;
+				font-size: 16px;
+			}
+			@media only screen and (max-device-width: 750px){
+  				.text {
+ 		  			width: 100%;
+  				}
+ 			}
+			
+ 			.head-border {
+ 				margin-right:auto;
+ 				margin-left:auto;
+ 				width: 75%;
+    			display: flex;
+    			align-items: center;
+			}
+			@media only screen and (max-device-width: 750px){
+  				.head-border{
+ 		  			width: 100%;
+ 		  			font-size: 24px;
+  				}
+ 			}
+ 			
+			.head-border:before,
+			.head-border:after {
+    			content: "";
+   				height: 3px;
+    			flex-grow: 1;
+    			background-color: #00ffff;
 			}
 			
-			.title {
-				font-size: 36px;
-				text-align: center;
+			.head-border:before {
+    			margin-right: 1rem;
 			}
-			@media only screen and (max-device-width: 750px) {
-  				.title {
-    				font-size: 22px;
-  				}
+			
+			.head-border:after {
+    			margin-left: 1rem;
 			}
 			
 			.youtube{
@@ -116,15 +167,19 @@
 			<br>
 		</div>
 		
-		<div id="title">
-			<p>
-				<h1>各チャンネルの最新の動画!!</h1>
-			</p>
+		<div id="tpart">
+			<h1 class="ptitle">
+				最新の動画!!
+			</h1>
 		</div>
 		
 		<br>
+		<div class="text">
+			最新の状態に更新されない場合は<a href="../latest">ここ</a>をクリックしてください。
+		</div>
 		<br>
-		<h2 class="title">リベロの部室<br>【ハイキュー!!ファンチャンネル】</h2>
+		
+		<h1 class="head-border" style="font-size: 16px;text-align: center">リベロの部室<br>【ハイキュー!!ファンチャンネル】</h1>
 		<div id="libero"></div>
 		<script>
 		$.ajax({
@@ -147,7 +202,7 @@
 		
 		<br>
 		<br>
-		<h2 class="title">ハザッス!!遊厨部!!</h2>
+		<h1 class="head-border">ハザッス!!遊厨部!!</h1>
 		<div id="hazass"></div>
 		<script>
 		$.ajax({
@@ -170,7 +225,7 @@
 		
 		<br>
 		<br>
-		<h2 class="title">リベロのオカルト研究会!!</h2>
+		<h1 class="head-border">リベロのオカルト研究会!!</h1>
 		<div id="occult"></div>
 		<script>
 		$.ajax({
@@ -193,7 +248,7 @@
 		
 		<br>
 		<br>
-		<h2 class="title">リベロP</h2>
+		<h1 class="head-border">リベロP</h1>
 		<div id="liberop"></div>
 		<script>
 		$.ajax({
@@ -216,7 +271,7 @@
 		
 		<br>
 		<br>
-		<h2 class="title">ハザッス!!ゲーム愛好会!!</h2>
+		<h1 class="head-border">ハザッス!!ゲーム愛好会!!</h1>
 		<div id="game"></div>
 		<script>
 		$.ajax({
@@ -239,7 +294,7 @@
 		
 		<br>
 		<br>
-		<h2 class="title">ハザッス!!ワンピース修業寺!!</h2>
+		<h1 class="head-border">ハザッス!!ワンピース修業寺!!</h1>
 		<div id="one"></div>
 		<script>
 		$.ajax({
