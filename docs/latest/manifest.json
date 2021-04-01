@@ -1,7 +1,7 @@
 {
-  "name"              : "タイトル未定!!",
-  "short_name"        : "タイトル未定!!",
-  "description"       : "ハザッス!!のやつ",
+  "name"              : "Oscilloscope!!",
+  "short_name"        : "Oscilloscope!!",
+  "description"       : "ハザッス!!の情報をまとめました(自分用)",
   "start_url"         : "index.html",
   "display"           : "standalone",
   "background_color"  : "#fff",
