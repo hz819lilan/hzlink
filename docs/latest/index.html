@@ -11,18 +11,6 @@
 		
 		<link rel="manifest" href="manifest.json">
 		
-		<script>
-		if ('serviceWorker' in navigator) {
-    	navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-        	console.log('ServiceWorker registration successful with scope: ', registration.scope);
-		}).catch(function(err) {
-        	console.log('ServiceWorker registration failed: ', err);
-    	});
-    	}
-		</script>
-		
-		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-		
 		<style>
 			body {
 				font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
@@ -92,60 +80,14 @@
  		  			width: 100%;
   				}
  			}
-			
- 			.head-border {
- 				margin-right:auto;
- 				margin-left:auto;
- 				width: 75%;
-    			display: flex;
-    			align-items: center;
-			}
-			@media only screen and (max-device-width: 750px){
-  				.head-border{
- 		  			width: 100%;
- 		  			font-size: 24px;
-  				}
- 			}
  			
-			.head-border:before,
-			.head-border:after {
-    			content: "";
-   				height: 3px;
-    			flex-grow: 1;
-    			background-color: #00ffff;
-			}
-			
-			.head-border:before {
-    			margin-right: 1rem;
-			}
-			
-			.head-border:after {
-    			margin-left: 1rem;
-			}
-			
-			.youtube{
-  			text-align: center;
-  			margin-right:auto;
- 			margin-left:auto;
-  			position: relative;
-  			width: 60%;
-  			height: 60%;
-  			padding-top: 33.75%;
-			}
-			@media only screen and (max-device-width: 750px){
-  				.youtube{
- 		  			width: 100%;
- 		  			height: 100%;
- 		  			padding-top: 56.25%;
-  				}
+ 			.maintenance {
+ 				margin: 1em auto;
+ 				padding: 1em;
+ 				color: #000;
+ 				background-color: #fff;
+ 				border: 4px solid #f00;
  			}
-			.youtube iframe{
-  			position: absolute;
-  			top: 0;
-  			left: 0;
-  			width: 100%;
-  			height: 100%;
-  			}
 			
  			footer {
  				 text-align:center;
@@ -166,157 +108,23 @@
 				<hr class="mpart">
 			<br>
 		</div>
-		
 		<div id="tpart">
 			<h1 class="ptitle">
 				最新の動画!!
 			</h1>
 		</div>
-		
 		<br>
 		<div class="text">
 			最新の状態に更新されない場合は<a href="../latest">ここ</a>をクリックしてください。
 		</div>
-		<br>
-		
-		<h1 class="head-border" style="font-size: 16px;text-align: center">リベロの部室<br>【ハイキュー!!ファンチャンネル】</h1>
-		<div id="libero"></div>
-		<script>
-		$.ajax({
-		  type: 'GET',
-		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCk_zdfZ4J7c0wysDk-AlTgA&maxResults=1&order=date&type=video&key=AIzaSyCJeInUFJE2SbieV2M5Gp3r5uPdukbsN88',
-		  datatype: 'json',
-		  success: function (json) {
-		    	num = json.items.length;
-		    	for(var i = 0; i < num ; i++){
-		       		var ID = json.items[i].id.videoId;
-		        	$("#libero").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		  		}
-		  },
-		  error: function () {
-				alert('【エラー】リベロの部室の最新動画取得に問題が発生しました。');
-		  },
-		});
-		</script>
-		<br>
-		
-		<br>
-		<br>
-		<h1 class="head-border">ハザッス!!遊厨部!!</h1>
-		<div id="hazass"></div>
-		<script>
-		$.ajax({
-		  type: 'GET',
-		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCOGneaNRwv9_5guAM0DmhOg&maxResults=1&order=date&type=video&key=AIzaSyAZ8R5fet4HrBOGmgt3ZrPhBt7_0XhzrC8',
-		  datatype: 'json',
-		  success: function (json) {
-			    num = json.items.length;
-			    for(var i = 0; i < num ; i++){
-			       	var ID = json.items[i].id.videoId;
-			        $("#hazass").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		  		}
-		  },
-		  error: function () {
-				alert('【エラー】ハザッス!!遊厨部!!の最新動画取得に問題が発生しました。');
-		  },
-		});
-		</script>
-		<br>
-		
-		<br>
-		<br>
-		<h1 class="head-border">リベロのオカルト研究会!!</h1>
-		<div id="occult"></div>
-		<script>
-		$.ajax({
-		  type: 'GET',
-		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC_d04ex-h8gXjBmGMtid9Dg&maxResults=1&order=date&type=video&key=AIzaSyCxdcKqoW9E-6UIGDus6scpeZMYKd5F7mo',
-		  datatype: 'json',
-		  success: function (json) {
-		    	num = json.items.length;
-		    	for(var i = 0; i < num ; i++){
-		      	 	var ID = json.items[i].id.videoId;
-		       	 	$("#occult").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		  		}
-		  },
-		  error: function () {
-				alert('【エラー】リベロのオカルト研究会!!の最新動画取得に問題が発生しました。');
-		  },
-		});
-		</script>
-		<br>
-		
-		<br>
-		<br>
-		<h1 class="head-border">リベロP</h1>
-		<div id="liberop"></div>
-		<script>
-		$.ajax({
-		  type: 'GET',
-		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCWYnMh8xY811DH8cb71fbUg&maxResults=1&order=date&type=video&key=AIzaSyAiL270ByHJ6nxnVP0i_PFAmsp-Wq_HqHk',
-		  datatype: 'json',
-		  success: function (json) {
-		    	num = json.items.length;
-		    	for(var i = 0; i < num ; i++){
-		       	var ID = json.items[i].id.videoId;
-		        	$("#liberop").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		  		}
-		  },
-		  error: function () {
-				alert('【エラー】リベロPの最新動画取得に問題が発生しました。');
-		  },
-		 });
-		</script>
-		<br>
-		
-		<br>
-		<br>
-		<h1 class="head-border">ハザッス!!ゲーム愛好会!!</h1>
-		<div id="game"></div>
-		<script>
-		$.ajax({
-		  type: 'GET',
-		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC0tX7rAh_xvj06hOxxUk76A&maxResults=1&order=date&type=video&key=AIzaSyAAlSS94o8VrfxXyx5bUdqkvQy1VTyi9v0',
-		  datatype: 'json',
-		  success: function (json) {
-		    	num = json.items.length;
-		    	for(var i = 0; i < num ; i++){
-		       	var ID = json.items[i].id.videoId;
-		        	$("#game").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		  		}
-		  },
-		  error: function () {
-				alert('【エラー】ハザッス!!ゲーム愛好会!!の最新動画取得に問題が発生しました。');
-		  },
-		});
-		</script>
-		<br>
-		
-		<br>
-		<br>
-		<h1 class="head-border">ハザッス!!ワンピース修業寺!!</h1>
-		<div id="one"></div>
-		<script>
-		$.ajax({
-		  type: 'GET',
-		  url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCac1PTUKHCy9rpTaDQxvQKw&maxResults=1&order=date&type=video&key=AIzaSyD2Ks4fRFB8ugjzSb33RkkahCG4iB6CG5M',
-		  datatype: 'json',
-		  success: function (json) {
-		    	num = json.items.length;
-		    	for(var i = 0; i < num ; i++){
-		       	var ID = json.items[i].id.videoId;
-		        	$("#one").append('<div class="youtube"><iframe width="700" height="394" src="https://www.youtube.com/embed/' + ID + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
-		  		}
-		  },
-		  error: function () {
-				alert('【エラー】ハザッス!!ワンピース修行寺!!の最新動画取得に問題が発生しました。');
-		  },
-		});
-		</script>
-		<br>
-		
-		<br>
-		<br>
+		<div class="text">
+			<div class="maintenance">
+				<div style="font-size: 32px;text-align: center">
+					【メンテナンス中】
+				</div>
+				最新の動画はトップページの各チャンネルリンク先より確認してください。
+			</div>
+		</div>
 		<div id="line">
 			<hr class="mpart">
 		</div>
