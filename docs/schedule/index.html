@@ -10,11 +10,22 @@
 				font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
 				background-color: #fff;
 			}
+			@media (prefers-color-scheme: dark) {
+  				body {
+    				background-color: #000;
+    				color: #fff;
+  				}
+			}
 			table {
 				border-collapse: collapse;
 				border: solid 2px #000;
 				margin: auto;
 				width: 100%;
+			}
+			@media (prefers-color-scheme: dark) {
+  				table {
+    				border: solid 2px #fff;
+  				}
 			}
 			table th {
 				margin: 0;
@@ -24,6 +35,11 @@
 				color: #fff;
 				font-size: 24px;
 			}
+			@media (prefers-color-scheme: dark) {
+  				table th {
+    				border: solid 1px #fff;
+  				}
+			}
 			@media only screen and (max-device-width: 750px){
   				table th {
  		  			font-size: 18px;
@@ -32,6 +48,11 @@
 			table td {
 				border: solid 1px #000;
 				padding: 1px 5px;
+			}
+			@media (prefers-color-scheme: dark) {
+  				table td {
+    				border: solid 1px #fff;
+  				}
 			}
 			@media only screen and (max-device-width: 750px){
   				table td {
@@ -45,7 +66,12 @@
 				font-size: 12px;
 			}
 			.back2 {
-				
+				background: #fff;
+			}
+			@media (prefers-color-scheme: dark) {
+  				.back2 {
+    				background: #000;
+  				}
 			}
 			.back3 {
 				
@@ -101,37 +127,37 @@
   			</tr>
   			<tr>
     			<td class="back1"><span class="day1" style="color: red">4</span><span class="day2" style="color: red">(日)</span></td>
-    			<td>
+    			<td class="back2">
     				<ul>
     					<li>セカンドシーズン</li>
     						比較  #15
     				</ul>
     			</td>
-    			<td>
+    			<td class="back2">
     				<ul>
     				</ul>
     			</td>
   			</tr>
   			<tr>
     			<td class="back1"><span class="day1">5</span><span class="day2">(月)</span></td>
-    			<td>
+    			<td class="back2">
     				<ul>
     				</ul>
     			</td>
-    			<td>
+    			<td class="back2">
     				<ul>
     				</ul>
     			</td>
   			</tr>
   			<tr>
     			<td class="back1"><span class="day1">6</span><span class="day2">(火)</span></td>
-    			<td>
+    			<td class="back2">
     				<ul>
     					<li>漢!!2大リベロ比較</li>
     						西谷&夜久
     				</ul>
     			</td>
-    			<td>
+    			<td class="back2">
     			<span style="color: blue">【ゲーム愛好会!!】</span>
     				<ul>
     					<li style="color: blue">モンハン生配信</li>
@@ -140,22 +166,22 @@
   			</tr>
   			<tr>
     			<td class="back1"><span class="day1">7</span><span class="day2">(水)</span></td>
-      			<td>
+      			<td class="back2">
     				<ul>
     				</ul>
     			</td>
-    			<td>
+    			<td class="back2">
     				<ul>
     				</ul>
     			</td>
   			</tr>
   			<tr>
     			<td class="back1"><span class="day1">8</span><span class="day2">(木)</span></td>
-    			<td>
+    			<td class="back2">
     				<ul>
     				</ul>
     			</td>
-    			<td>
+    			<td class="back2">
     			<span style="color: blue">【ゲーム愛好会!!】</span>
     				<ul>
     					<li style="color: blue">モンハン生配信</li>
@@ -164,27 +190,27 @@
   			</tr>
   			<tr>
     			<td class="back1"><span class="day1">9</span><span class="day2">(金)</span></td>
-    			<td>
+    			<td class="back2">
     				<ul>
     					<li>烏野スタメン</li>
     						日向2,3年時
     				</ul>
     			</td>
-    			<td>
+    			<td class="back2">
     				<ul>
     				</ul>
     			</td>
   			</tr>
   			<tr>
     			<td class="back1"><span class="day1" style="color: blue">10</span><span class="day2" style="color: blue">(土)</span></td>
-    			<td>
+    			<td class="back2">
     				<ul>
     					<li>まなこく</li>
     					<li style="color: blue">【生配信】</li>
     					<span style="color: blue">	おしおし #6</span>
     				</ul>
     			</td>
-    			<td>
+    			<td class="back2">
     				<ul>
     				</ul>
     			</td>
