@@ -129,9 +129,15 @@
  			}
  			
  			iframe {
-  				max-width: 100%;
+  				width: 100%;
+  				height: 450px;
   				border: none;
 			}
+			@media only screen and (max-device-width: 750px){
+  				iframe {
+  				height: 350px;
+  				}
+ 			}
  			
  			.chicon {
  				margin: 20px;
@@ -273,7 +279,7 @@
 		<div id="schedule">
 			<h1 class="head-border">今週の予定</h1>
 			<div class="text">
-				<iframe src="schedule/" width="1000" height="563"></iframe>
+				<iframe src="schedule/"></iframe>
 			</div>
 		</div>
 		<div id="notification">
