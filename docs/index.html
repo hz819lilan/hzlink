@@ -128,16 +128,17 @@
   				}
  			}
  			
- 			iframe {
-  				width: 100%;
-  				height: 450px;
-  				border: none;
-			}
-			@media only screen and (max-device-width: 750px){
-  				iframe {
-  				height: 350px;
-  				}
+ 			.frame {
+ 				
  			}
+ 			
+			iframe {
+				max-width: 100%;
+			}
+			
+			.altpic {
+				width: 75%;
+			}
  			
  			.chicon {
  				margin: 20px;
@@ -279,7 +280,19 @@
 		<div id="schedule">
 			<h1 class="head-border">今週の予定</h1>
 			<div class="text">
-				<iframe src="schedule/"></iframe>
+				<h2>～Web版～</h2>
+				<div class="frame">
+					<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQIfAipaWsf0xx-_55F4iYzWKz09H5EEAk0XEV2ysu598xB4A0O4tSgKoEfaykQUulbiXADj1WbU5nX/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&gid=0&range=a1:c8" style="width:690px; height:620px"></iframe>
+				</div>
+				※サイズ調整中(PCに最適化)
+				<br>
+				<br>
+				<h2>～画像版～</h2>
+				<div>
+					<img src="図2.png" class="altpic"/>
+					<br>
+					<a href="図2.png" download="今週の予定.png">DownLoad</a>
+				</div>
 			</div>
 		</div>
 		<div id="notification">
