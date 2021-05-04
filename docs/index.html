@@ -21,6 +21,110 @@
     	}
 		</script>
 		
+		<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+		
+		<!-- ハザッス!!遊厨部!! -->
+		<script>
+		var hzs = "";
+		$.ajax({
+			type: 'GET',
+		  	url: 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCOGneaNRwv9_5guAM0DmhOg&key=AIzaSyAazqLZ1rxcxT3Z_qfjJTVMk5A0Rx26G9w',
+		 	datatype: 'json',
+		 	async: false,
+		}).done(function (json) {
+		  		num = json.items.length;
+		    	for(var i = 0; i < num ; i++){
+		    		hzs = json.items[i].statistics.subscriberCount;
+		  		}
+		  	}
+		)
+		</script>
+		
+		<!-- リベロの部室 -->
+		<script>
+		var lbs = "";
+		$.ajax({
+			type: 'GET',
+		  	url: 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCk_zdfZ4J7c0wysDk-AlTgA&key=AIzaSyAazqLZ1rxcxT3Z_qfjJTVMk5A0Rx26G9w',
+		 	datatype: 'json',
+		 	async: false,
+		}).done(function (json) {
+		  		num = json.items.length;
+		    	for(var i = 0; i < num ; i++){
+					lbs = json.items[i].statistics.subscriberCount;
+		  		}
+		  	}
+		)
+		</script>
+		
+		<!-- リベロのオカルト研究会!! -->
+		<script>
+		var lcs = "";
+		$.ajax({
+			type: 'GET',
+		  	url: 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC_d04ex-h8gXjBmGMtid9Dg&key=AIzaSyAazqLZ1rxcxT3Z_qfjJTVMk5A0Rx26G9w',
+		 	datatype: 'json',
+		 	async: false,
+		}).done(function (json) {
+		  		num = json.items.length;
+		    	for(var i = 0; i < num ; i++){
+					lcs = json.items[i].statistics.subscriberCount;
+		  		}
+		  	}
+		)
+		</script>
+		
+		<!-- リベロP -->
+		<script>
+		var lps = "";
+		$.ajax({
+			type: 'GET',
+		  	url: 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCWYnMh8xY811DH8cb71fbUg&key=AIzaSyAazqLZ1rxcxT3Z_qfjJTVMk5A0Rx26G9w',
+		 	datatype: 'json',
+		 	async: false,
+		}).done(function (json) {
+		  		num = json.items.length;
+		    	for(var i = 0; i < num ; i++){
+					lps = json.items[i].statistics.subscriberCount;
+		  		}
+		  	}
+		)
+		</script>
+		
+		<!-- ハザッス!!ゲーム愛好会!! -->
+		<script>
+		var hgs = "";
+		$.ajax({
+			type: 'GET',
+		  	url: 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UC0tX7rAh_xvj06hOxxUk76A&key=AIzaSyAazqLZ1rxcxT3Z_qfjJTVMk5A0Rx26G9w',
+		 	datatype: 'json',
+		 	async: false,
+		 }).done(function (json) {
+		  		num = json.items.length;
+		    	for(var i = 0; i < num ; i++){
+					hgs = json.items[i].statistics.subscriberCount;
+		  		}
+		  	}
+		)
+		</script>
+		
+		<!-- ハザッス!!ワンピース修業寺!! -->
+		<script>
+		var hos = "";
+		$.ajax({
+			type: 'GET',
+		  	url: 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCac1PTUKHCy9rpTaDQxvQKw&key=AIzaSyAazqLZ1rxcxT3Z_qfjJTVMk5A0Rx26G9w',
+		 	datatype: 'json',
+		 	async: false,
+		}).done(function (json) {
+		  		num = json.items.length;
+		    	for(var i = 0; i < num ; i++){
+					hos = json.items[i].statistics.subscriberCount;
+				}
+		  	}
+		 )
+		</script>
+		
 		<style>
 			body{
 				font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
@@ -128,6 +232,30 @@
   				}
  			}
  			
+ 			.sub {
+ 				font-size: 24px;
+ 			}
+ 			
+ 			.subtitle {
+ 				display: inline-block;
+ 				width: 10em;
+ 				text-align: left;
+ 			}
+ 			
+ 			.sdata {
+ 				display: inline-block;
+ 				width: 60px;
+ 				text-align: right;
+ 			}
+ 			
+ 			.sdatab {
+ 				display: inline-block;
+ 				width: 100px;
+ 				text-align: right;
+ 				font-size: 42px;
+ 				color: #f00;
+ 			}
+ 			
  			.frame {
  				
  			}
@@ -187,6 +315,26 @@
  		  			font-size: 18px
   				}
  			}
+ 			
+ 			.twitch {
+ 				width: 60%;
+ 				margin-top: 20px;
+ 				margin-bottom: 20px;
+				margin-right: auto;
+				margin-left: auto;
+			  	border-radius: 20px;
+			  	background-color: #9147FF;
+			  	padding: 10px;
+			  	text-align: center;
+			  	font-size: 24px;
+			}
+			@media only screen and (max-device-width: 750px){
+  				.twitch {
+  					width: 90%;
+ 		  			font-size: 18px
+  				}
+ 			}
+
  			
  			.btnlink {
 			  	text-decoration: none;
@@ -271,16 +419,82 @@
 			最新の状態に更新されない場合は<a href="../hzlink">ここ</a>をクリックしてください。
 		</div>
 		<br>
+		<div id="subscriber">
+			<h1 class="head-border">登録者数</h1>
+			<div class="text">
+				<div class="sub">
+					<span class="subtitle">ハザッス!!遊厨部!!：</span>
+					<span class="sdata"><script>document.write(Number(hzs))</script></span>
+				</div>
+				<div class="sub">
+					<span class="subtitle">リベロの部室：</span>
+					<span class="sdata"><script>document.write(Number(lbs))</script></span>
+				</div>
+				<div class="sub">
+					<span class="subtitle">リベロP：</span>
+					<span class="sdata"><script>document.write(Number(lps))</script></span>
+				</div>
+				<div class="sub">
+					<span class="subtitle">オカルト研究会!!：</span>
+					<span class="sdata"><script>document.write(Number(lcs))</script></span>
+				</div>
+				<div class="sub">
+					<span class="subtitle">ゲーム愛好会!!：</span>
+					<span class="sdata"><script>document.write(Number(hgs))</script></span>
+				</div>
+				<div class="sub">
+					<span class="subtitle">ワンピース修業寺!!：</span>
+					<span class="sdata"><script>document.write(Number(hos))</script></span>
+				</div>
+				<br>
+				<div class="sub">
+					<span class="subtitle">6チャンネル計：</span>
+					<span class="sdatab">
+							<script>
+								sum = Number(hzs)+Number(lbs)+Number(lps)+Number(lcs)+Number(hgs)+Number(hos)
+								document.write(Number(sum))
+							</script>
+					</span>
+				<div class="sub">
+					<span class="subtitle">合計1万人まで：</span>
+					<span class="sdatab">
+							<script>
+								ato = 10000-Number(sum)
+								document.write(Number(ato))
+							</script>
+					</span>
+				</div>
+			</div>
+		</div>
 		<div id="latestvideo">
 			<h1 class="head-border">最新の動画</h1>
 			<div class="text">
+			<!--
 				<a href="latest/" class="video">こちらから!!</a>
+			-->
+			【メンテナンス中です】
 			</div>
 		</div>
 		<div id="schedule">
 			<h1 class="head-border">今週の予定</h1>
 			<div class="text">
 			【準備中です】
+			<!--
+			<iframe src="schedule/"></iframe>
+				<h2>～Web版～</h2>
+				<div class="frame">
+					<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQIfAipaWsf0xx-_55F4iYzWKz09H5EEAk0XEV2ysu598xB4A0O4tSgKoEfaykQUulbiXADj1WbU5nX/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&gid=0&range=a1:c8" style="width:690px; height:620px"></iframe>
+				</div>
+				※サイズ調整中(PCに最適化)
+				<br>
+				<br>
+				<h2>～画像版～</h2>
+				<div>
+					<img src="図2.png" class="altpic"/>
+					<br>
+					<a href="図2.png" download="今週の予定.png">DownLoad</a>
+				</div>
+			-->
 			</div>
 		</div>
 		<div id="notification">
@@ -345,6 +559,11 @@
 				<div class="btn">
 					<a href="https://vt.tiktok.com/ZS4AaWcA/" target="_blank" rel="noopener noreferrer" class="btnlink">
 						ハザッス!!宣伝部!!(TikTok)
+					</a>
+				</div>
+				<div class="twitch">
+					<a href="https://www.twitch.tv/liberop_33" target="_blank" rel="noopener noreferrer" class="btnlink">
+						Twitch
 					</a>
 				</div>
 			</div>

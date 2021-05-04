@@ -10,6 +10,7 @@ var urlsToCache = [
 	'index.html',
 	'manifest.json',
 	'service-worker.js',
+	'jquery-3.6.0.min.js',
 	'Instagram.png',
 	'LINE.png',
 	'Twitter.png',
