@@ -256,13 +256,14 @@
  				color: #f00;
  			}
  			
- 			.frame {
- 				
+ 			iframe {
+ 				max-width: 100%;
  			}
- 			
-			iframe {
-				max-width: 100%;
-			}
+ 			@media only screen and (max-device-width: 750px){
+  				iframe {
+  					height: 600px;
+  				}
+ 			}
 			
 			.altpic {
 				width: 75%;
@@ -469,32 +470,23 @@
 		<div id="latestvideo">
 			<h1 class="head-border">最新の動画</h1>
 			<div class="text">
-			<!--
 				<a href="latest/" class="video">こちらから!!</a>
-			-->
-			【メンテナンス中です】
 			</div>
 		</div>
 		<div id="schedule">
-			<h1 class="head-border">今週の予定</h1>
+			<h1 class="head-border">予定</h1>
 			<div class="text">
-			【準備中です】
-			<!--
-			<iframe src="schedule/"></iframe>
-				<h2>～Web版～</h2>
-				<div class="frame">
-					<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQIfAipaWsf0xx-_55F4iYzWKz09H5EEAk0XEV2ysu598xB4A0O4tSgKoEfaykQUulbiXADj1WbU5nX/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false&gid=0&range=a1:c8" style="width:690px; height:620px"></iframe>
+				<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23039BE5&amp;ctz=Asia%2FTokyo&amp;src=aHo4MTlsaWxhbkBnbWFpbC5jb20&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+				<div style="text-align: left">
+				―凡例―<br>
+				【遊】：ハザッス!!遊厨部!!<br>
+				【部】：リベロの部室<br>
+				【リ】：リベロP<br>
+				【オ】：リベロのオカルト研究会!!<br>
+				【ゲ】：ハザッス!!ゲーム愛好会!!<br>
+				【ワ】：ハザッス!!ワンピース修行寺!!<br>
+				●：生配信
 				</div>
-				※サイズ調整中(PCに最適化)
-				<br>
-				<br>
-				<h2>～画像版～</h2>
-				<div>
-					<img src="図2.png" class="altpic"/>
-					<br>
-					<a href="図2.png" download="今週の予定.png">DownLoad</a>
-				</div>
-			-->
 			</div>
 		</div>
 		<div id="notification">
