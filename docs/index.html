@@ -232,6 +232,17 @@
   				}
  			}
  			
+ 			.contxt {
+ 				font-size: 80px;
+ 				font-weight: bold;
+ 			}
+			@media only screen and (max-device-width: 750px){
+  				.contxt {
+ 		  			width: 100%;
+ 		  			font-size: 30px;
+  				}
+ 			}
+ 			
  			.sub {
  				font-size: 24px;
  			}
@@ -239,6 +250,12 @@
  			.subtitle {
  				display: inline-block;
  				width: 10em;
+ 				text-align: left;
+ 			}
+ 			
+ 			.subtitleb {
+ 				display: inline-block;
+ 				width: 8em;
  				text-align: left;
  			}
  			
@@ -250,7 +267,7 @@
  			
  			.sdatab {
  				display: inline-block;
- 				width: 100px;
+ 				width: 120px;
  				text-align: right;
  				font-size: 42px;
  				color: #f00;
@@ -335,7 +352,6 @@
  		  			font-size: 18px
   				}
  			}
-
  			
  			.btnlink {
 			  	text-decoration: none;
@@ -420,6 +436,19 @@
 			最新の状態に更新されない場合は<a href="../hzlink">ここ</a>をクリックしてください。<br>
 		</div>
 		<br>
+		<div id="notification">
+			<h1 class="head-border">お知らせ</h1>
+			<!--
+			<div class="text" style="text-align: left">
+			現在お知らせはありません。
+			</div>
+			-->
+			<div class="text">
+				<div class="contxt">
+					<div style="color: #FF4001">登録者合計10,000人</div><div style="color: #3BE640">おめでとうございます!!</div>
+				</div>
+			</div>
+		</div>
 		<div id="subscriber">
 			<h1 class="head-border">登録者数</h1>
 			<div class="text">
@@ -449,7 +478,7 @@
 				</div>
 				<br>
 				<div class="sub">
-					<span class="subtitle">6チャンネル計：</span>
+					<span class="subtitleb">6チャンネル計：</span>
 					<span class="sdatab">
 							<script>
 								sum = Number(hzs)+Number(lbs)+Number(lps)+Number(lcs)+Number(hgs)+Number(hos)
@@ -457,7 +486,7 @@
 							</script>
 					</span>
 				<div class="sub">
-					<span class="subtitle">合計1万人まで：</span>
+					<span class="subtitleb">合計1万人まで：</span>
 					<span class="sdatab">
 							<script>
 								ato = 10000-Number(sum)
@@ -487,12 +516,6 @@
 				【ワ】：ハザッス!!ワンピース修行寺!!<br>
 				●：生配信
 				</div>
-			</div>
-		</div>
-		<div id="notification">
-			<h1 class="head-border">お知らせ</h1>
-			<div class="text" style="text-align: left">
-			現在お知らせはありません。
 			</div>
 		</div>
 		<div id="ch">
